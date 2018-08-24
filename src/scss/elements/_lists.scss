@@ -1,0 +1,39 @@
+ul, ol {
+	margin-bottom	: 1.5em;
+	margin-top 		: 0;
+	padding-left 	: 1.5em;
+	@include nobreak();
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-bottom 	: 0;
+	margin-left 	: 1.5em;
+}
+
+dl {
+	@include nobreak();
+	margin-top: 0;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}
+
+dialog {
+	border 	: none;
+	display : block;
+	position: static;
+}

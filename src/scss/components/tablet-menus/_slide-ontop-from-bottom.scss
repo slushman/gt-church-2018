@@ -1,0 +1,11 @@
+/**
+ * Slide on top of content from bottom.
+ */
+.tablet-slide-ontop-from-bottom {
+	.menu-1-items-0 {
+		@include tablet-to-laptop {
+			bottom 			: 0;
+			transform 		: translateY( 100%);
+		}
+	}
+}

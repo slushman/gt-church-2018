@@ -1,0 +1,86 @@
+/**
+ * Menus
+ */
+.menu-1-items { // all the ULs
+	@include resetlist();
+
+	@include laptop-up {
+		@include center();
+	}
+}
+
+.menu-1-items-closed {
+	@include tablet-down {
+		display: none;
+	}
+}
+
+.menu-1-items-0 { // the 1st-level menu
+	@include phone-down {
+		display: none;
+
+		&[aria-expanded="true"] {
+			display: block;
+		}
+	}
+
+	&[aria-expanded="false"] {
+
+		@include phone-down() {
+			display: none;
+		}
+	}
+
+	&[aria-expanded="true"] {
+		@include phone-down() {
+			display : block;
+			padding : 0;
+		}
+
+		.menu-main-menu-container {
+			@include adminbar-to-laptop() {
+				transform: translateX(0);
+			}
+
+		}
+	}
+
+	ul { // all the submenus
+		@include laptop-up {
+			box-shadow 	: 0 3px 3px rgba($oc-gray-9, 0.2);
+			display 	: block;
+			left 		: 0;
+			opacity 	: 0;
+			position 	: absolute;
+			transition 	: visibility 0s ease, opacity 0.5s ease;
+			visibility 	: hidden;
+			z-index 	: 99999;
+		}
+	}
+}
+
+.menu-1-items-1 { // 2nd-level menu
+	background-color: $oc-gray-4;
+	display			: inherit;
+
+	a { // all the links under the 2nd-level menu
+		@include laptop-up {
+			min-width: 200px;
+		}
+	}
+
+}
+
+.menu-1-items-2 {
+	@include tablet-portrait-up {
+		left: 100%;
+		top	: 0;
+	}
+
+	a {
+		@include phone-down() {
+			border-left : none;
+			padding 	: 0.5em 3em;
+		}
+	}
+}

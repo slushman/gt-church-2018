@@ -1,0 +1,70 @@
+/**
+ * Block styling for Gutenberg blocks.
+ */
+
+
+
+// Large Images
+.alignfull {
+	@include tablet-portrait-up {
+		margin-left		: calc( 50% - 50vw);
+		margin-right	: calc( 50% - 50vw);
+		max-width 		: 1000%;
+		width 			: auto;
+
+		& img {
+			display	: block;
+			margin	: 0 auto;
+		}
+	}
+}
+
+.alignwide {
+	@include tablet-portrait-up {
+		margin-left		: calc( 25% - 25vw);
+		margin-right	: calc( 25% - 25vw);
+		max-width 		: 1000%;
+		width 			: auto;
+
+		& img {
+			display	: block;
+			margin	: 0 auto;
+		}
+	}
+}
+
+
+
+// HR
+hr.wp-block-separator {
+	@extend hr;
+}
+
+
+
+// Blockquotes
+.is-large.wp-block-quote {
+	margin 		: 0 0 $size__default-bot-marg;
+	padding 	: 0;
+
+	cite {
+		text-align: center;
+	}
+}
+
+.wp-block-pullquote {
+	border-top		: 2px solid;
+	border-bottom	: 2px solid;
+	padding 		: $size__default-bot-marg 0;
+}
+
+
+
+.wp-block-button {
+	margin-bottom	: $size__default-bot-marg;
+	text-align		: center;
+
+	.wp-block-button__link {
+		@extend button;
+	}
+}

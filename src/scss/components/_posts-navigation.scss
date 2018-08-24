@@ -1,0 +1,22 @@
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	main & {
+		margin	: 0 0 $size__default-bot-marg;
+		overflow: hidden;
+	}
+
+	.nav-links {
+		display: flex;
+	}
+
+	.nav-previous {
+		flex: 1 0 50%;
+	}
+
+	.nav-next {
+		flex 		: 1 0 50%;
+		text-align 	: end;
+	}
+}

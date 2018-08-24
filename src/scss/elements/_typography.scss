@@ -1,0 +1,17 @@
+body,
+button,
+[role="button"],
+input,
+select,
+optgroup,
+textarea {
+	color 		: $oc-gray-7;
+	font-family	: $font__main;
+	line-height	: $font__line-height-body;
+
+	@include font-size(1);
+
+	// .openSans-loaded & {
+	// 	font-family: $font__main-open-sans;
+	// }
+}

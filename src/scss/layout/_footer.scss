@@ -1,0 +1,15 @@
+.site-footer {
+	grid-area	: footer;
+	width 		: 100%;
+}
+
+.wrap-footer {
+	@include centermax( 1em );
+	overflow 	: auto;
+}
+
+.site-info {
+	overflow 	: auto;
+	text-align: center;
+	width 		: 100%;
+}

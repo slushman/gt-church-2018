@@ -1,0 +1,40 @@
+.widget-area {
+	grid-area 	: sidebar;
+	overflow 	: auto;
+	padding 	: 1em;
+	width 		: 100%;
+
+	@include ellipsis();
+}
+
+.widget {
+	margin: 0 0 1.5em;
+
+	/* Make sure select elements fit in widgets */
+	select {
+		max-width: 100%;
+	}
+}
+
+/* Search widget */
+.widget_search {
+
+	.search-submit {
+		display: none;
+	}
+
+	.search-field {
+		width: 98.5%;
+	}
+}
+
+.widget_recent_comments {
+	.recentcomments {
+		a {
+			display			: inline-block !important;
+			max-width 		: $size__max-comment-link;
+			vertical-align 	: bottom;
+			@include ellipsis();
+		}
+	}
+}

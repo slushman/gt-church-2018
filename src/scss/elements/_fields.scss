@@ -1,0 +1,23 @@
+input,
+textarea {
+	border 				: 1px solid $oc-gray-4;
+	border-radius 		: 3px;
+	padding 			: 3px;
+
+	&:focus {
+		border-color 	: $oc-gray-4;
+		outline-color 	: $oc-gray-5;
+	}
+}
+
+textarea {
+	width 		: 100%;
+}
+
+select {
+	-webkit-appearance 	: none;
+	-moz-appearance 	: none;
+	appearance 			: none;
+	border 				: 0;
+	padding 			: 0.1em 0.5em;
+}

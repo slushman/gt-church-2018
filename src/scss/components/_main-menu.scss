@@ -1,0 +1,17 @@
+@import "main-menu/toggles";
+@import "main-menu/menu-lists";
+@import "main-menu/menu-items";
+@import "main-menu/menu-item-links";
+@import "main-menu/current-menu-item";
+
+.nav-1 {
+	display	: block;
+	width 	: 100%;
+}
+
+.body-toggle-tablet-menu {
+	@include tablet-to-laptop {
+		left 		: $size__menu_width;
+		overflow-x 	: hidden;
+	}
+}

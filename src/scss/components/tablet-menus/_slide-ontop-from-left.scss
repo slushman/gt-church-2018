@@ -1,0 +1,27 @@
+/**
+ * Slide on top of content from left
+ */
+.tablet-slide-ontop-from-left {
+	.menu-1-items-0 {
+		@include tablet-to-laptop {
+			left 			: 0;
+			transform 		: translateX( -$size__menu_width);
+		}
+	}
+
+	.close-btn-text {
+		&:before {
+			@include tablet-to-laptop {
+				border-right-color	: $oc-gray-9;
+				display 			: inline-block;
+				margin-right		: 0.5em;
+			}
+		}
+	}
+
+	.menu-1-toggle {
+		@include tablet-to-laptop {
+			right 			: 0;
+		}
+	}
+}

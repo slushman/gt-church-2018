@@ -1,0 +1,35 @@
+.site-header {
+	// DO NOT ADD PADDING HERE! - it screws up menus
+	grid-area		: header;
+	margin-bottom	: $size__default-bot-marg;
+	overflow 		: auto;
+
+	@include tablet-portrait-up {
+		overflow 	: visible;
+	}
+}
+
+.wrap-header {
+	@include centermax();
+}
+
+.site-branding {
+	margin		: 0 auto;
+}
+
+.site-title {
+	text-align: center;
+}
+
+.site-title-link {
+	color 			: $oc-gray-7;
+	text-decoration : none;
+}
+
+.site-description {
+	text-align: center;
+}
+
+.custom-logo-link {
+	display: block;
+}

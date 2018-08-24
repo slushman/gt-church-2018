@@ -1,0 +1,26 @@
+.content-sidebar {
+	grid-template-areas		:
+		"header header"
+		"content sidebar"
+		"footer footer";
+	grid-template-columns	: 3fr 1fr;
+	display					: grid;
+}
+
+.sidebar-content {
+	grid-template-areas		:
+		"header header"
+		"sidebar content"
+		"footer footer";
+	grid-template-columns	: 1fr 3fr;
+	display					: grid;
+}
+
+.full-width {
+	grid-template-areas		:
+		"header"
+		"content"
+		"footer";
+	grid-template-columns	: auto;
+	display					: grid;
+}

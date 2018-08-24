@@ -1,0 +1,46 @@
+/**
+ * Current Menu Items.
+ */
+.current-menu-1-item {
+	@include tablet-portrait-up {
+		background-color: $oc-gray-5;
+	}
+}
+
+.current-menu-1-item-link {
+	color: $oc-gray-7;
+	
+	&:visited {
+		color: $oc-gray-7;
+	}
+	
+	&:hover {
+		color: $oc-gray-5;
+	}
+}
+
+
+/**
+ * Current Menu Items.
+ */
+// .current-menu-item,
+// .current-menu-parent,
+// .current_page_item,
+// .current_page_ancestor {
+// 
+// 	@include tablet-portrait-up {
+// 		background-color: $oc-gray-5;
+// 	}
+// 
+// 	> a { // menu item link directly under the above current class menu items and below.
+// 		color: $oc-gray-7;
+// 	}
+// 
+// 	&:hover,
+// 	&.focus {
+// 
+// 		> a {
+// 			color: $oc-gray-7;
+// 		}
+// 	}
+// }

@@ -1,0 +1,58 @@
+.hidden-search-top {
+	background-color: $oc-gray-3;
+	height 			: $size__hidden-search;
+	position 		: absolute;
+	top 			: 0;
+	transform 		: translateY( -$size__hidden-search );
+	transition 		: $trans__default;
+	width 			: 100%;
+	z-index 		: 999;
+
+	@include adminbar();
+}
+
+.hidden-search-form {
+	display 		: flex;
+	justify-content	: center;
+	margin 			: 0 auto;
+	position 		: relative;
+	width 			: 100%;
+}
+
+.hidden-search-field {
+	border-radius 	: 0;
+	float 			: left;
+	font-size 		: 20px;
+	height 			: 38px;
+	padding 		: 0.5em;
+	width 			: calc( 100% - 80px );
+}
+
+.hidden-search-btn {
+	@include resetbutton();
+
+	transition 		: $trans__default;
+
+	&:hover {
+		background-color: $oc-gray-7;
+
+		svg {
+			fill: $oc-gray-0;
+		}
+	}
+}
+
+.hidden-search-open {
+	margin-top: 0;
+}
+
+.hidden-search-wrap {
+	@include vertcenter();
+}
+
+.search-icon svg {
+	fill 		: $oc-gray-7;
+	height		: 30px;
+	transition 	: $trans__default;
+	width		: 30px;
+}

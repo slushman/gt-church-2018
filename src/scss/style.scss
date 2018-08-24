@@ -1,0 +1,80 @@
+/*!
+Theme Name: GT Church 2018
+Theme URI: https://www.gtchurch.com/
+Author: slushman
+Author URI: https://www.slushman.com/
+GitHub Theme URI: https://github.com/slushman/gt-church-2018
+Description: WordPress theme based on _s by Automattic.
+Version: 1.1
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: gt
+Tags: accessibility-ready, responsive-layout, full-width-template, theme-options, translation-ready, custom-logo, custom-menu
+
+This framework, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+GT Church 2018 is based on Underscores https://underscores.me/, (C) 2012-2018 Automattic, Inc.
+GT Church 2018 is distributed under the terms of the GNU GPL v2.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/.
+*/
+
+/*--------------------------------------------------------------
+## Tools
+--------------------------------------------------------------*/
+@import "tools/vars";
+@import "tools/mixins";
+@import "tools/normalize";
+
+/*--------------------------------------------------------------
+## Elements
+--------------------------------------------------------------*/
+@import "elements/root";
+@import "elements/typography";
+@import "elements/headings";
+@import "elements/copy";
+@import "elements/lists";
+@import "elements/tables";
+@import "elements/fields";
+@import "elements/buttons";
+@import "elements/links";
+@import "elements/media";
+
+/*--------------------------------------------------------------
+## Components
+--------------------------------------------------------------*/
+@import "components/blocks";
+@import "components/breadcrumbs";
+@import "components/captions";
+@import "components/entry-meta";
+@import "components/galleries";
+@import "components/media";
+@import "components/posts-navigation";
+@import "components/main-menu";
+@import "components/social";
+
+/*--------------------------------------------------------------
+## Layout
+--------------------------------------------------------------*/
+@import "layout/asides";
+@import "layout/comments";
+@import "layout/footer";
+@import "layout/header";
+@import "layout/home";
+@import "layout/templates";
+@import "layout/posts-and-pages";
+@import "layout/widgets";
+
+/*--------------------------------------------------------------
+## Utilities
+--------------------------------------------------------------*/
+@import "utilities/accessibility";
+@import "utilities/alignments";
+@import "utilities/links-files";
+@import "utilities/shapes";
+
+/*--------------------------------------------------------------
+## Plugins
+--------------------------------------------------------------*/

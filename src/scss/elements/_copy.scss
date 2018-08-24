@@ -1,0 +1,112 @@
+p {
+	margin-bottom	: $size__default-bot-marg;
+	margin-top 		: 0;
+}
+
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+blockquote,
+q {
+	background	: transparent;
+	font-style 	: italic;
+	margin 		: 0 0 $size__default-bot-marg;
+	padding 	: 0;
+	quotes		: "\“" "\”" "‘" "’";
+	text-align 	: center;
+
+	cite {
+		display		: block;
+		font-size 	: 1.25em;
+		margin-top 	: 1em;
+	}
+
+	&:before {
+		content		: open-quote;
+		font-size	: 1.25em;
+		line-height	: 1.25;
+	}
+
+	&:after {
+		content		: close-quote;
+		font-size	: 1.25em;
+		line-height	: 1.25;
+	}
+
+	p {
+		display: inline;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+
+	&.is-large.wp-block-quote {
+		margin 		: 0 0 $size__default-bot-marg;
+		padding 	: 0;
+
+		cite {
+			text-align: center;
+		}
+	}
+
+	&.wp-block-pullquote {
+		border-top		: 2px solid;
+		border-bottom	: 2px solid;
+		padding 		: $size__default-bot-marg 0;
+	}
+
+	@include tablet-landscape-up {
+		font-size 	: 1.5em;
+		line-height : 1.45833333;
+	}
+}
+
+blockquote {
+	margin: 0 $size__default-bot-marg*2 $size__default-bot-marg;
+}
+
+address {
+	font-style 	: normal;
+	margin 		: 0;
+}
+
+pre {
+	background		: $oc-gray-3;
+	color 			: $oc-gray-7;
+	@include font-size(0.9375);
+	line-height		: $font__line-height-pre;
+	margin-bottom	: 1.6em;
+	max-width		: 100%;
+	overflow		: auto;
+	padding			: 1.6em;
+}
+
+code,
+kbd,
+samp,
+tt,
+var {
+	@include font-size(0.9375);
+}
+
+abbr,
+acronym {
+	border-bottom	: 1px dotted $oc-gray-6;
+	cursor			: help;
+}
+
+mark,
+ins {
+	background		: $oc-yellow-1;
+	color 			: $oc-gray-8;
+	padding 		: 0 0.25em;
+	text-decoration	: none;
+}
+
+big {
+	font-size: 125%;
+}

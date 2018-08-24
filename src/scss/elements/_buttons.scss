@@ -1,0 +1,24 @@
+button,
+[type="button"],
+[role="button"],
+[type="reset"],
+[type="submit"] {
+	background 			: $oc-gray-1;
+	border 				: 1px solid $oc-gray-4;
+	border-radius		: 3px;
+	line-height 		: 1;
+	padding 			: .6em 1em .4em;
+
+	@include font-size(0.75);
+
+	&:hover {
+		background-color 	: $oc-gray-3;
+		border-bottom-color	: $oc-gray-5;
+	}
+
+	&:focus,
+	&:active {
+		background-color 	: $oc-gray-3;
+		border-top-color 	: $oc-gray-5;
+	}
+}

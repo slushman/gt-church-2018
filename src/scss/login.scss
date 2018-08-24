@@ -1,0 +1,97 @@
+/**
+ * Custom styling for the login form page
+ */
+
+@import "tools/vars";
+@import "tools/mixins";
+
+h1 {
+
+	a {
+		height 	: 175px;
+		width 	: 320px; // max: 320px
+
+		@include bgimage( 'images/logo.jpg' );
+	}
+}
+
+[name="loginform"] {
+	background-color: $oc-gray-0;
+	padding-bottom 	: 26px;
+
+	p {
+
+	}
+
+	label {
+		color: $oc-gray-7;
+	}
+}
+
+.input { // username and password fields
+	border-color 	: $oc-gray-4;
+	color 			: $oc-gray-7;
+
+	&:focus,
+	&:active {
+		border 		: 1px solid $oc-gray-5;
+		box-shadow 	: 0 0 5px $oc-gray-5;
+	}
+}
+
+.submit { // submit button p tag
+
+}
+
+
+
+[href$="?action=lostpassword"] {
+	color: $oc-gray-7;
+
+	&:hover {
+		color: $oc-gray-4;
+	}
+}
+
+#backtoblog {
+
+	a {
+		color: $oc-gray-7;
+
+		&:hover {
+			color: $oc-gray-4;
+		}
+	}
+}
+
+.forgetmenot { // remember me checkbox p tag
+
+	label {
+
+	}
+}
+
+[name="rememberme"] { // checkbox itself
+	background-color: $oc-gray-4;
+	color 			: $oc-gray-7;
+
+	&:checked {
+
+		&:before {
+			color: $oc-gray-4;
+		}
+	}
+}
+
+.login { // page body tag
+	background: $oc-gray-3;
+
+	.button-primary { // submit button itself
+		@include resetbutton( $oc-gray-4, $oc-gray-7, $oc-gray-0 );
+
+		color 			: $oc-gray-7;
+		font-size 		: 1.25em;
+		font-weight 	: 700;
+		text-transform 	: uppercase;
+	}
+}

@@ -1,0 +1,98 @@
+.menu-1-items-0 {
+	@include tablet-to-laptop {
+		background-color: $bg__tablet-menu;
+		overflow 		: auto;
+		transition 		: transform 0.4s ease;
+		z-index 		: 9999;
+	}
+}
+
+.menu-1-toggle {
+	@include tablet-to-laptop {
+		position 		: absolute;
+		width 			: $size__menu_width;
+		z-index 		: 9999;
+	}
+}
+
+.tablet-push {
+	.menu-1-items-0 {
+		@include tablet-to-laptop {
+			bottom 			: 0;
+			height 			: 100%;
+			position 		: fixed;
+			top 			: 0;
+			width 			: $size__menu_width;
+		}
+	}
+	
+	&.admin-bar {
+		.menu-1-items-0 {
+			@include tablet-to-adminbar {
+				top: $size__wp-admin-bar-1;
+			}
+
+			@include adminbar-to-laptop {
+				top: $size__wp-admin-bar-2;
+			}
+		}
+	}
+	
+	.menu-1-toggle {
+		@include tablet-to-laptop {
+			transition 		: transform 0.4s ease;
+		}
+	}
+}
+
+.tablet-slide-sides {
+	.menu-1-items-0 {
+		@include tablet-to-laptop {
+			bottom 			: 0;
+			display 		: block;
+			height 			: 100%;
+			position 		: fixed;
+			top 			: 0;
+			width 			: $size__menu_width;
+
+			&[aria-expanded="true"] {
+				transform 	: translateX(0);
+			}
+		}
+	}
+	
+	&.admin-bar {
+		.menu-1-items-0 {
+			@include tablet-to-adminbar {
+				padding-top: $size__wp-admin-bar-1;
+			}
+
+			@include adminbar-to-laptop {
+				padding-top: $size__wp-admin-bar-2;
+			}
+		}
+	}
+}
+
+.tablet-slide-topbot {
+	.menu-1-items-0 {
+		@include tablet-to-laptop {
+			display 		: block;
+			left 			: 0;
+			position 		: absolute;
+			right 			: 0;
+			transform 		: translateX( -$size__menu_width);
+			width 			: 100%;
+
+			&[aria-expanded="true"] {
+				transform 	: translateY(0);
+			}
+		}
+	}
+	
+	.menu-1-toggle {
+		@include tablet-to-laptop {
+			right 			: 0;
+		}
+	}
+}

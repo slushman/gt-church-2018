@@ -1,0 +1,28 @@
+/**
+ * Pushes content aside from right.
+ */
+.tablet-push-from-right {
+
+	&.tablet-menu-open {
+		@include tablet-to-laptop {
+			transform: translateX( -$size__menu_width );
+
+			.menu-1-toggle {
+				transform: translateX($size__menu_width);
+			}
+		}
+	}
+
+	.menu-1-items-0 {
+		@include tablet-to-laptop {
+			right 			: 0;
+			transform 		: translateX( $size__menu_width );
+		}
+	}
+
+	.menu-1-toggle {
+		@include tablet-to-laptop {
+			left 			: 0;
+		}
+	}
+}

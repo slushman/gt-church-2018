@@ -1,0 +1,38 @@
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 1.5em;
+}
+
+.entry-header {
+	margin-bottom: 1.5em;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin-bottom: 1.5em;
+}
+
+.page-links {
+	margin: 0 0 1.5em;
+}
+
+.site-content {
+	overflow 	: auto;
+	width 		: 100%;
+
+	@include centermax();
+
+	margin-bottom: $size__default-bot-marg;
+}
+
+.archive-entry-link {
+	color: $oc-gray-9;
+}
+
+body.sticky {
+	display: grid !important;
+}
