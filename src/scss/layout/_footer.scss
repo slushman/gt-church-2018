@@ -1,15 +1,27 @@
 .site-footer {
-	grid-area	: footer;
-	width 		: 100%;
+	align-items 	: center;
+	background-color: $color_darkgray;
+	color 			: $color_light;
+	display 		: flex;
+	flex-direction 	: column;
+	grid-area		: footer;
+	justify-content : center;
+	padding 		: 3em;
+	width 			: 100%;
+
+	a {
+		color: $color_light;
+	}
 }
 
-.wrap-footer {
-	@include centermax( 1em );
-	overflow 	: auto;
+.copyright {
+	margin-bottom: 1.5em;
+
+	a {
+		text-decoration: none;
+	}
 }
 
-.site-info {
-	overflow 	: auto;
-	text-align: center;
-	width 		: 100%;
+.footer-address {
+	margin-bottom: 1.5em;
 }
