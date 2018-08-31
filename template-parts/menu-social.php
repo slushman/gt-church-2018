@@ -8,7 +8,7 @@
  * @package GTChurch2018
  */
 
-if ( ! has_nav_menu( 'menu-3' ) ) { return; }
+if ( ! has_nav_menu( 'social' ) ) { return; }
 
 $menu_args['theme_location']	= 'social';
 $menu_args['container'] 		= false;

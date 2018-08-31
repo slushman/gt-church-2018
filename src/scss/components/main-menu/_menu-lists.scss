@@ -15,37 +15,42 @@
 	}
 }
 
-.menu-1-items-0 { // the 1st-level menu
-	@include phone-down {
-		display: none;
+.menu-1-items-open > ul {
+	@include tablet-down {
+		display: inherit;
+	}
+}
 
-		&[aria-expanded="true"] {
-			display: block;
-		}
+.menu-1-items-0 { // the 1st-level menu
+	@include tablet-down {
+		background-color: $color_light;
+		bottom 			: 0;
+		height 			: 100%;
+		left 			: 0;
+		padding-right 	: $size__toggle-width;
+		padding-top 	: $size__wp-admin-bar-1;
+		position 		: fixed;
+		overflow 		: auto;
+		top 			: 0;
+		transform 		: translateX( -100% );
+		transition 		: all 0.4s ease;
+		width 			: 100%;
+		z-index 		: 9998;
 	}
 
-	&[aria-expanded="false"] {
-
-		@include phone-down() {
-			display: none;
-		}
+	@include adminbar-to-laptop {
+		padding-top: $size__wp-admin-bar-2;
 	}
 
 	&[aria-expanded="true"] {
-		@include phone-down() {
-			display : block;
-			padding : 0;
-		}
-
-		.menu-main-menu-container {
-			@include adminbar-to-laptop() {
-				transform: translateX(0);
-			}
-
+		@include tablet-down() {
+			transform 	: translateX(0);
+			transition 	: all 0.4s ease;
 		}
 	}
 
 	ul { // all the submenus
+
 		@include laptop-up {
 			box-shadow 	: 0 3px 3px rgba($oc-gray-9, 0.2);
 			display 	: block;
@@ -60,10 +65,16 @@
 }
 
 .menu-1-items-1 { // 2nd-level menu
-	background-color: $oc-gray-4;
-	display			: inherit;
+	background-color: $color_darkgray;
 
 	a { // all the links under the 2nd-level menu
+		color: $color_light;
+
+		&:hover {
+			background-color: $color_darkteal;
+			color 			: $color_light;
+		}
+
 		@include laptop-up {
 			min-width: 200px;
 		}

@@ -27,6 +27,25 @@
 	@include centermax();
 
 	margin-bottom: $size__default-bot-marg;
+
+	a {
+	color: royalblue;
+
+	&:visited {
+		color: purple;
+	}
+
+	&:active,
+	&:hover {
+		color: midnightblue;
+	}
+
+	&:focus {
+		color 			: midnightblue;
+		outline-color 	: $oc-gray-5;
+	}
+}
+
 }
 
 .archive-entry-link {

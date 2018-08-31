@@ -2,20 +2,15 @@
  * Current Menu Items.
  */
 .current-menu-1-item {
-	@include tablet-portrait-up {
-		background-color: $oc-gray-5;
-	}
 }
 
 .current-menu-1-item-link {
-	color: $oc-gray-7;
+	background-color: $color_darkteal;
+	color 			: $color_light;
 	
-	&:visited {
-		color: $oc-gray-7;
-	}
-	
+	&:visited,
 	&:hover {
-		color: $oc-gray-5;
+		color: $color_light;
 	}
 }
 

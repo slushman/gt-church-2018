@@ -29,7 +29,6 @@ class Customizer {
 		add_action( 'customize_register', 					array( $this, 'register_sections' ) );
 		add_action( 'customize_register', 					array( $this, 'register_fields_default' ) );
 		add_action( 'customize_register', 					array( $this, 'register_fields_images' ) );
-		add_action( 'customize_register', 					array( $this, 'register_fields_menus' ) );
 		add_action( 'customize_register', 					array( $this, 'register_fields_siteid' ) );
 		add_action( 'wp_head', 								array( $this, 'header_output' ) );
 		//add_action( 'customize_register', 					array( $this, 'load_customize_controls' ), 0 );
@@ -216,59 +215,6 @@ class Customizer {
 		);
 
 	} // register_fields_images()
-
-	/**
-	 * Registers controls/fields for the menus section in the Customizer.
-	 *
-	 * Note: To enable instant preview, we have to actually write a bit of custom
-	 * javascript. See live_preview() for more.
-	 *
-	 * Note: To use active_callbacks, don't add these to the selecting control, it apepars these conflict:
-	 * 		'transport' => 'postMessage'
-	 * 		$wp_customize->get_setting( 'field_name' )->transport = 'postMessage';
-	 *
-	 * @hooked 		customize_register
-	 * @see			add_action( 'customize_register', $func )
-	 * @link 		http://ottopress.com/2012/how-to-leverage-the-theme-customizer-in-your-own-themes/
-	 * @since 		1.0.0
-	 * @param 		WP_Customize_Manager 		$wp_customize 		Theme Customizer object.
-	 */
-	public function register_fields_menus( $wp_customize ) {
-
-		// Tablet Menu Field
-		$wp_customize->add_setting(
-			'tablet_menu',
-			array(
-				'capability' 		=> 'edit_theme_options',
-				'default'  			=> '',
-				'sanitize_callback' => 'sanitize_text_field',
-				'transport' 		=> 'postMessage',
-				'type' 				=> 'theme_mod'
-			)
-		);
-		$wp_customize->add_control(
-			'tablet_menu',
-			array(
-				'active_callback' 	=> '',
-				'choices' 			=> array(
-					'tablet-slide-ontop-from-left' 		=> esc_html__( 'Slide On Top from Left', 'gt' ),
-					'tablet-slide-ontop-from-right' 	=> esc_html__( 'Slide On Top from Right', 'gt' ),
-					'tablet-slide-ontop-from-top' 		=> esc_html__( 'Slide On Top from Top', 'gt' ),
-					'tablet-slide-ontop-from-bottom' 	=> esc_html__( 'Slide On Top from Bottom', 'gt' ),
-					'tablet-push-from-left' 			=> esc_html__( 'Push In from Left', 'gt' ),
-					'tablet-push-from-right' 			=> esc_html__( 'Push In from Right', 'gt' ),
-				),
-				'description' 		=> esc_html__( 'Select how the tablet menu appears.', 'gt' ),
-				'label'  			=> esc_html__( 'Tablet Menu', 'gt' ),
-				'priority' 			=> 10,
-				'section'  			=> 'tablet_menu',
-				'settings' 			=> 'tablet_menu',
-				'type' 				=> 'select'
-			)
-		);
-		$wp_customize->get_setting( 'tablet_menu' )->transport = 'postMessage';
-
-	} // register_fields_menus()
 
 	/**
 	 * Registers controls/fields for the Site ID section in Customizer.

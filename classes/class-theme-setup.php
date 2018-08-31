@@ -72,9 +72,8 @@ class Theme_Setup {
 	public function register_menus() {
 
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'gt' ),
-			'menu-2' => esc_html__( 'Footer', 'gt' ),
-			'menu-3' => esc_html__( 'Social', 'gt' ),
+			'header' => esc_html__( 'Header', 'gt' ),
+			'social' => esc_html__( 'Social', 'gt' ),
 		) );
 
 	} // register_menus()

@@ -3,30 +3,30 @@
  */
 .menu-1-item-link {
 	align-items 	: center;
-	color 			: $oc-gray-7;
+	color 			: $color_gray;
 	display			: flex;
 	padding 		: 0.5em 1em;
 	text-decoration	: none;
+	text-transform 	: uppercase;
 	transition 		: $trans__default;
 	white-space 	: nowrap;
 
-	@include laptop-down {
+	@include tablet-down {
+		font-size 		: 1.25em;
 		justify-content	: space-between;
 	}
 
-	@include tablet-portrait-up {
-		color: $oc-gray-7;
-	}
-
-	@include laptop-up {
-		background-color: $oc-gray-4;
-		color 			: $oc-gray-9;
-	}
-
 	&:focus {
-		outline-color: $oc-gray-4;
+		outline-color: $color_teal;
 	}
 
+	&:hover {
+		color: $color_darkgray;
+	}
+
+	&:not(:hover) {
+		//color: $color_light;
+	}
 }
 
 .menu-1-item-link-1 { // 2nd-level menu item link, first submenu

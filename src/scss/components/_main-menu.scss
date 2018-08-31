@@ -5,8 +5,9 @@
 @import "main-menu/current-menu-item";
 
 .nav-1 {
-	display	: block;
-	width 	: 100%;
+	display			: flex;
+	justify-content : flex-end;
+	width 			: 100%;
 }
 
 .body-toggle-tablet-menu {

@@ -1,11 +1,18 @@
 .site-header {
 	// DO NOT ADD PADDING HERE! - it screws up menus
-	grid-area		: header;
-	margin-bottom	: $size__default-bot-marg;
-	overflow 		: auto;
+	grid-area				: header;
+	margin-bottom			: $size__default-bot-marg;
+	overflow 				: auto;
+	position 				: relative;
 
 	@include tablet-portrait-up {
 		overflow 	: visible;
+	}
+
+	@include laptop-up {
+		display 				: grid;
+		grid-template-columns 	: 1fr 3fr;
+		padding 				: 0 3em;
 	}
 }
 
@@ -14,11 +21,13 @@
 }
 
 .site-branding {
-	margin		: 0 auto;
 }
 
 .site-title {
-	text-align: center;
+	margin 			: 0;
+	padding-bottom 	: 0.25em;
+	padding-top 	: 0.25em;
+	text-align 		: center;
 }
 
 .site-title-link {
@@ -32,4 +41,12 @@
 
 .custom-logo-link {
 	display: block;
+}
+
+.custom-logo {
+
+	.site-title & {
+		display 	: inline-block;
+		max-width 	: 50vw;
+	}
 }
